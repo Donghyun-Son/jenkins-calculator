@@ -1,5 +1,6 @@
 package com.sdh.calculator;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,6 +14,7 @@ public class Calculator {
 	 * @param b
 	 * @return int
 	 */
+	@Cacheable("sum")
 	int sum(int a, int b) {
 		return a + b;
 	}
@@ -21,6 +23,7 @@ public class Calculator {
 	 * @param b
 	 * @return int
 	 */
+	@Cacheable("sub")
 	int sub(int a, int b) {
 		return a - b;
 	}
@@ -29,6 +32,7 @@ public class Calculator {
 	 * @param b
 	 * @return int
 	 */
+	@Cacheable("mul")
 	int mul(int a, int b) {
 		return a * b;
 	}
@@ -37,6 +41,7 @@ public class Calculator {
 	 * @param b
 	 * @return int
 	 */
+	@Cacheable("div")
 	int div(int a, int b) {
 		return a / b;
 	}
