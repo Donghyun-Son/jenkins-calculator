@@ -3,6 +3,6 @@ services:
    calculator:
       image: localhost:5000/tbc01204/calculator:latest
       ports:
-         - "8090:8090"
+         - "8090"
    redis:
       image: redis:latest
